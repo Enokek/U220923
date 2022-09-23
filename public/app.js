@@ -20,16 +20,18 @@ var CardCharacter = {
 
 }
 */
-
+var x;
+var y;
 var buildDeck = [x, y];
   
-console.log(buildDeck[2][3]);
+console.table()
 
-function draw(max) {
-return Math.floor(Math.random() * max);
+function drawCard(max) {
+    var randomCard = (max) => Math.floor(Math.random(buildDeck) * max);
+    console.log(randomCard(4) + ', ' + randomCard(13));
 
-console.log(draw(3));
 
+   
 }
 
 
