@@ -11,12 +11,29 @@ let cardType = ['C','H','S','D' ] Clubs, Hearts, Spades, Diamonds
 */
 
 var buildDeck = [
-[A,2,3,4,5,6,7,8,9,10,J,Q,K]
-[A,2,3,4,5,6,7,8,9,10,J,Q,K]
-[A,2,3,4,5,6,7,8,9,10,J,Q,K]
-[A,2,3,4,5,6,7,8,9,10,J,Q,K]
+[1,2,3,4,5,6,7,8,9,10,11,12,13]
+[1,2,3,4,5,6,7,8,9,10,11,12,13]
+[1,2,3,4,5,6,7,8,9,10,11,12,13]
+[1,2,3,4,5,6,7,8,9,10,11,12,13]
 
-]
+];
+var CardCharacter = {
 
+    Clubs: '',
+    Hearts: '',
+    Spades: '',
+    Diamonds: ''
+
+}
+  
 
 console.log(buildDeck[2][3]);
+
+function draw(max) {
+return Math.floor(Math.random() * max);
+console.log(getRandomInt(3));
+
+}
+
+
+
