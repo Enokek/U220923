@@ -1,11 +1,9 @@
-var computersum = 0;
-var yourSum = 0;
+var color;
+var value;
 
-
-
-var x;
-var y;
 var Deck = [color, value];
+
+
 var gamestart = [];
 var YourCards = [];
 var ComputerCards = [];
@@ -13,11 +11,27 @@ var hitCards = [];
 
 
 
+
+/*drawCard = () => {
+
+    var Rcard = (max) => Math.floor(Math.random(Deck) * max);
+    color = Rcard(4)
+    value = Rcard(13)
+    cards = {color, value}
+    Deck.pish(cards);
+}
+
+includecard = {} => {
+
+    if(YourCards.includes (`${color} ${value}`))
+}
+*/
 function drawCards() {
     const divMain = document.getElementById("main")
     divMain.hidden = false;
     YourCards = [];
     var randomCard = (max) => Math.floor(Math.random(Deck) * max);
+
 
     for (i=0; i < 2; i++) {
     var Cards = (randomCard(4) + ', ' + randomCard(13));
@@ -42,18 +56,43 @@ function drawCards() {
 
 }
 
- 
+
 function hit (){
     var randomCard = (max) => Math.floor(Math.random(Deck) * max);
     var Cards = (randomCard(4) + ', ' + randomCard(13));
     hitCards.push(Cards);
 
-    hitCard = document.getElementById("hitcard")
-    hitCard.innerHTML = (`${hitCards}` )
+    var hitCard = document.getElementById("hitcard")
     }
     
 
-    
+
+    function Result ()
+{
+    var TheResults = document.getElementById("results")
+    let result = 0;
+    for ( var i = 0; i < Deck.length; i++) {
+
+        if (Deck[i].value+1 > 10) {
+            result += 10;
+
+        }else {
+
+            result += Deck[i].value+1;
+        }
+    }   
+    TheResults.innerHTML = result;
+
+    if ( result == 21 ) {
+        alert('Winner!')
+    } else if ( result > 21) {
+        alert('Loser!')
+
+
+}
+}    
+
+
 
 
 /*var yourcards =[]
